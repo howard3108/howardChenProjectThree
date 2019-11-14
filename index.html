@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Whack a mole</title>
+  <link rel="stylesheet" href="styles/style.css"> </link>
+</head>
+
+<body>
+  <main>
+    <h1>Whack a Mole</h1>
+    <section class="game">
+      <div class="gameBoard">
+        <ul>
+          <li class="hole hole1">
+            <img src="styles/images/mole.png" class="mole mole1">
+          </li>
+          <li class="hole hole2">
+            <img src="styles/images/mole.png" class="mole mole2">
+          </li>
+          <li class="hole hole3">
+            <img src="styles/images/mole.png" class="mole mole3">
+          </li>
+        </ul>
+      </div>
+      <div class="instructionMenu">
+        <h2>Instructions</h2>
+        <p>Hi welcome to the whack a mole game! To play this game you have to click on the moles when they appear. Once you click them within them being out from the ground you get one point!</p>
+        <button class="startGamePrompt">Confirm</button>
+      </div>
+    </section>
+
+    <section>
+    <p class="score">0</p>
+    <div class="message"></div>
+    <button class="instructionPrompt">Start Game!</button>
+    </section>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
