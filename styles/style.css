@@ -34,7 +34,7 @@ instructionMenu p, .bottomScoreSection p, .instructionPrompt, .game p {
 }
 
 body{
-  background-image: url(../images/background.jpg);
+  background-image: url(../assets/background.jpg);
   background-position: center;
   background-size: cover; 
 }
@@ -85,7 +85,7 @@ h1 {
 }
 
 .hole {
-  background-image: url(../images/grass.png);
+  background-image: url(../assets/grass.png);
   width: 300px;
   height: 275px;
   margin-top: 4%;
@@ -154,6 +154,14 @@ h1 {
   margin: 0 10%;
 }
 
+footer {
+  background: black;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+
 @media (min-width: 0px) and (max-width: 620px) { 
   h1 {
     font-size: 2.4rem;
@@ -192,5 +200,9 @@ h1 {
 
   .bottomScoreSection .instructionPrompt, .bottomScoreSection p, .game p {
     font-size: 1.6rem;
+  }
+
+  footer {
+    font-size: 1rem;
   }
 }

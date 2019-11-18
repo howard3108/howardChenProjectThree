@@ -15,6 +15,7 @@ let score = 0;
 const gamePlay = {};
 let gameEnd = false;
 let gameTimeReset = false;
+const audio = new Audio('./assets/animalCrossingMusic.mp3')
 
 // the function that init all the functions of the game
 gamePlay.init = function(){
@@ -58,6 +59,7 @@ gamePlay.instruction = function(){
   $('.startGamePrompt').on('click', function(){
     $('.instructionMenu').hide();
     $('.gameBoard').show();
+    audio.play();
     // this is to reset the console to make the score 0
     gameTimer = 30;
     score = 0;
