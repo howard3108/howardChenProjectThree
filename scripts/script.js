@@ -33,11 +33,13 @@ gamePlay.instructionButton = function(){
   })
 }
 
+// setting the game timer as 20
 let gameTimer = 20;
 const countDownTime = function(){
   $('#timeLeft').text(gameTimer+' secs');
 }
 
+// set interval and decrease from 20 ever 1 sec.
 countDown = function(){
   setInterval(function(){
     if (gameTimer >- 0) {
