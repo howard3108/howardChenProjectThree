@@ -67,17 +67,20 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   list-style: none;
   padding: 0;
 }
 
 .holeContainer {
   width: 50%;
+}
+
+.holeContainer2, .holeContainer4 {
   display: flex;
 }
 
 .holeContainer1, .holeContainer3 {
+  display: flex;
   justify-content: end;
 }
 
