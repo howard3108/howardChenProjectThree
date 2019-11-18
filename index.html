@@ -5,41 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Whack a mole</title>
-  <link rel="stylesheet" href="styles/style.css"> </link>
+  <link rel="stylesheet" href="styles/style.css"></link>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <main>
     <h1>Whack a Mole</h1>
     <section class="game">
+      <p>Time Left: <span id="timeLeft">20 secs</span></p>
       <div class="gameBoard">
         <ul>
-          <li class="hole hole1">
-            <img src="styles/images/mole.png" class="mole mole1">
+          <li class="holeContainer holeContainer1">
+            <div class="hole hole1">
+              <img src="./images/resetti.png" class="mole mole1">
+            </div>
           </li>
-          <li class="hole hole2">
-            <img src="styles/images/mole.png" class="mole mole2">
+          <li class="holeContainer holeContainer2">
+            <div class="hole hole2">
+              <img src="./images/resetti.png" class="mole mole2">
+            </div>
           </li>
-          <li class="hole hole3">
-            <img src="styles/images/mole.png" class="mole mole3">
+          <li class="holeContainer holeContainer3">
+            <div class="hole hole3">
+              <img src="./images/resetti.png" class="mole mole3">
+            </div>
+          </li>
+          <li class="holeContainer holeContainer4">
+            <div class="hole hole4">
+              <img src="./images/resetti.png" class="mole mole4">
+            </div>
           </li>
         </ul>
       </div>
       <div class="instructionMenu">
         <h2>Instructions</h2>
-        <p>Hi welcome to the whack a mole game! To play this game you have to click on the moles when they appear. Once you click them within them being out from the ground you get one point!</p>
+        <p>Hi, welcome to the whack a mole game! To play this game you have to click on the moles when they appear. Once you click on them you get a point!!</p>
         <button class="startGamePrompt">Confirm</button>
       </div>
     </section>
 
-    <section>
-    <p class="score">0</p>
+    <section class="bottomScoreSection">
+    <p>Score: <span class="score">0</span></p>
     <div class="message"></div>
     <button class="instructionPrompt">Start Game!</button>
     </section>
-
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

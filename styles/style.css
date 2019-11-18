@@ -6,19 +6,181 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+/* general styling */
+
+html {
+  font-size: 62.5%;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+h1, .game p, .instructionMenu h2, .instructionMenu p, .instructionPrompt, .bottomScoreSection p {
+  text-shadow: 1px -2px 0px rgba(0,0,0,1),0 0 5px rgb(14, 0, 95);
+}
+
+instructionMenu p, .bottomScoreSection p, .instructionPrompt, .game p {
+  font-size: 2rem;
+}
+
+.startGamePrompt, .instructionPrompt {
+  color: white;
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 5%;
+}
+
+.gameBoard ul, .game p, .instructionMenu h2 {
+  margin: 0;
+}
+
+body{
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover; 
+}
+
+main{
+  height: 100%;
+}
+
+h1 {
+  text-align: center; 
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  padding-top: 20px;
+  font-size: 5rem;
+}
+
+.game, .bottomScoreSection {
+  background: rgba(0,0,0,0.7);
+}
+
+.game {
+  width: 80%;
+  height: 650px;
+  margin: 0 auto;
+}
+
+/* styling for game baord */
+
+.gameBoard ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.holeContainer {
+  width: 50%;
+  display: flex;
+}
+
+.holeContainer1, .holeContainer3 {
+  justify-content: end;
+}
+
 .hole {
-  background-color: green;
-  display: inline-block;
+  background-image: url(../images/grass.png);
   width: 300px;
-  height: 300px;
+  height: 275px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.hole1, .hole3 {
+  margin-right: 5%;
+}
+
+.hole2, .hole4 {
+  margin-left: 5%;
+}
+
+.mole {
+  width: 100%;
+  max-width: 275px;
+  height: 275px; 
+  display: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game p {
+  text-align: center; 
+  padding-top: 30px;
 }
 
 .instructionMenu {
   display: none;
 }
 
-.mole {
-  width: 300px;
-  height: 300px; 
-  display: none;
+.instructionMenu {
+  padding: 0 20%;
+  position: relative; 
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.instructionMenu h2 {
+  font-size: 3rem;
+}
+
+.instructionMenu p {
+  margin: 30px 0;
+}
+
+.startGamePrompt {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.bottomScoreSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  margin: 0 10%;
+}
+
+@media (min-width: 0px) and (max-width: 620px) { 
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .game {
+    height: 525px;
+  }
+
+  .game p {
+    padding-top: 10px;
+  }
+
+  .instructionMenu {
+    padding: 0 10px;
+    height: auto;
+  }
+
+  .instructionMenu h2 {
+    font-size: 2rem;
+  }
+
+  .hole, .mole {
+    height: 225px;
+  }
+
+  .game, .bottomScoreSection {
+    width: 100%;
+  }
+
+  .bottomScoreSection {
+    margin: 0;
+  }
+
+  .bottomScoreSection .instructionPrompt, .bottomScoreSection p, .game p {
+    font-size: 1.6rem;
+  }
 }
