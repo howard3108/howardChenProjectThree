@@ -29,17 +29,17 @@ gamePlay.instructionButton = function(){
   $('.instructionPrompt').on('click', function(){
     $('.gameBoard').hide();
     $('.instructionMenu').show();
-    $('#timeLeft').text('20 secs');
+    $('#timeLeft').text('30 secs');
   })
 }
 
-// setting the game timer as 20
-let gameTimer = 20;
+// setting the game timer as 30
+let gameTimer = 30;
 const countDownTime = function(){
   $('#timeLeft').text(gameTimer+' secs');
 }
 
-// set interval and decrease from 20 ever 1 sec.
+// set interval and decrease from 30 ever 1 sec.
 countDown = function(){
   setInterval(function(){
     if (gameTimer >- 0) {
@@ -59,7 +59,7 @@ gamePlay.instruction = function(){
     $('.instructionMenu').hide();
     $('.gameBoard').show();
     // this is to reset the console to make the score 0
-    gameTimer = 20;
+    gameTimer = 30;
     score = 0;
     // this is to change the text to 0 when we start new game
     $('.score').text('0');
@@ -67,7 +67,7 @@ gamePlay.instruction = function(){
     gamePlay.startGame();
     setTimeout(function(){
       return finishGame();
-    }, 20000);
+    }, 30000);
     // timer function
     if (gameTimeReset === false){
       countDown();
@@ -79,7 +79,7 @@ gamePlay.instruction = function(){
     // allow the game to end by allowing the function of finishGame to change to bullean true after 10 second and it order for the game to start the gameEnd bullean must be false.
     setTimeout(function(){
       return gameTimerReset();
-    }, 20000);
+    }, 30000);
   })
 }
 
@@ -88,7 +88,7 @@ gamePlay.startGame = function(){
   // We give a variable to allow us to grab the class of mole and the object number provided by the gameplay.randomMole function
   const moleAppears = $('.mole'+gamePlay.randomMole('.mole'));
   moleAppears.show();
-  let timer = Math.round(Math.random() * 2000) + 500
+  let timer = Math.round(Math.random() * 2000) + 900
   setTimeout(function(){
     $('.mole').hide();
     if(!gameEnd) gamePlay.startGame()
@@ -105,8 +105,10 @@ gamePlay.randomMole = function(){
 gamePlay.scoreRecongizer = function(){
   $('.mole').on('click', function(){
     $('.mole').hide();
+    $(this).parent().find('.hit').show();
     score++;
     $('.score').text(score);
+    $('.hit').fadeOut(300);
   })
 }
 

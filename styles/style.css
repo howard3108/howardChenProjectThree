@@ -110,6 +110,13 @@ h1 {
   transform: translateX(-50%);
 }
 
+.hit {
+  width: 100%;
+  display: none;
+  height: 100%;
+  z-index: 1;
+}
+
 .game p {
   text-align: center; 
   padding-top: 30px;
