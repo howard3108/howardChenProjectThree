@@ -81,7 +81,7 @@ h1 {
 
 .holeContainer1, .holeContainer3 {
   display: flex;
-  justify-content: end;
+  flex-direction: row-reverse;
 }
 
 .hole {
@@ -108,6 +108,13 @@ h1 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.hit {
+  width: 100%;
+  display: none;
+  height: 100%;
+  z-index: 1;
 }
 
 .game p {
